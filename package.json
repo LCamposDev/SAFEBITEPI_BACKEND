@@ -19,7 +19,11 @@
     "test:protected": "node tests/test-protected-route.js",
     "test:password-reset": "node tests/test-password-reset.js",
     "generate:jwt-secret": "node scripts/generate-jwt-secret.js",
-    "check:env": "node scripts/check-env.js"
+    "check:env": "node scripts/check-env.js",
+    "docker:up": "docker-compose -f docker-compose.dev.yml up -d",
+    "docker:down": "docker-compose -f docker-compose.dev.yml down",
+    "docker:logs": "docker-compose -f docker-compose.dev.yml logs -f postgres",
+    "docker:reset": "docker-compose -f docker-compose.dev.yml down -v && docker-compose -f docker-compose.dev.yml up -d"
   },
   "keywords": [
     "recipes",
