@@ -2,8 +2,9 @@ const express = require('express');
 const router = express.Router();
 
 // Importar rotas
-// const authRoutes = require('./auth.routes');
-// const userRoutes = require('./user.routes');
+const authRoutes = require('./auth.routes');
+const testRoutes = require('./test.routes');
+const userRoutes = require('./user.routes');
 // const recipeRoutes = require('./recipe.routes');
 // const restrictionRoutes = require('./restriction.routes');
 
@@ -17,8 +18,9 @@ router.get('/health', (req, res) => {
 });
 
 // Rotas da API
-// router.use('/auth', authRoutes);
-// router.use('/users', userRoutes);
+router.use('/auth', authRoutes);
+router.use('/test', testRoutes);
+router.use('/users', userRoutes);
 // router.use('/recipes', recipeRoutes);
 // router.use('/restrictions', restrictionRoutes);
 

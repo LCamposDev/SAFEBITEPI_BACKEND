@@ -14,7 +14,12 @@
     "format": "prettier --write \"src/**/*.js\"",
     "format:check": "prettier --check \"src/**/*.js\"",
     "check": "npm run lint && npm run format:check",
-    "test:db": "node src/config/test-db.js"
+    "test:db": "node src/config/test-db.js",
+    "test:auth": "node tests/test-auth.js",
+    "test:protected": "node tests/test-protected-route.js",
+    "test:password-reset": "node tests/test-password-reset.js",
+    "generate:jwt-secret": "node scripts/generate-jwt-secret.js",
+    "check:env": "node scripts/check-env.js"
   },
   "keywords": [
     "recipes",
